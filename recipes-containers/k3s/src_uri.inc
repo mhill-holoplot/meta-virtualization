@@ -2236,7 +2236,7 @@ SRC_URI += "git://github.com/stoewer/go-strcase;name=go-strcase;protocol=https;n
 # github.com/storageos/go-api v2.2.0+incompatible
 # [1] git ls-remote https://github.com/storageos/go-api d6e6bab2519238b8a582cabd2f4a71cca81963aa 
 SRCREV_go-api="d6e6bab2519238b8a582cabd2f4a71cca81963aa"
-SRC_URI += "git://github.com/storageos/go-api;name=go-api;protocol=https;nobranch=1;destsuffix=${WORKDIR}/${BP}/src/import/vendor.fetch/github.com/storageos/go-api"
+SRC_URI += "git://github.com/logicalhan/go-api;name=go-api;protocol=https;nobranch=1;destsuffix=${WORKDIR}/${BP}/src/import/vendor.fetch/github.com/storageos/go-api"
 
 # github.com/stretchr/objx v0.4.0
 # [1] git ls-remote https://github.com/stretchr/objx 5dbb4e6c708f7eb56fc184f7c5dd5e482b555f69 
