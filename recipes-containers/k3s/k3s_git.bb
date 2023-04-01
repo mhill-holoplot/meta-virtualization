@@ -56,7 +56,10 @@ do_compile() {
 
         cd ${S}/src/import
 
-        ln -sf vendor.copy vendor
+        ln -sf vendor.fetch vendor
+
+        stat vendor.fetch
+        stat vendor
 
         # these are bad symlinks, go validates them and breaks the build if they are present
         rm -f vendor/go.etcd.io/etcd/client/v*/example_*
@@ -68,6 +71,7 @@ do_compile() {
 	#
 	#         vendor/github.com/containerd/containerd/snapshots/btrfs/plugin/*.go
 
+        
         cp ${WORKDIR}/modules.txt vendor/
 
         ${GO} build -trimpath -tags "$TAGS" -ldflags "${GO_BUILD_LDFLAGS} -w -s" -o ./dist/artifacts/k3s ./cmd/server/main.go
